@@ -443,6 +443,14 @@ CONVENTIONS:
                                 <input type="hidden" name="cc_number_masked" id="cc_number_masked" value="{{ cc_number_masked }}" />
                                 <input type="hidden" name="cc_exp_year_saved" id="cc_exp_year_saved" value="{{ cc_exp_year }}" />
                                 <input type="hidden" name="cc_exp_month_saved" id="cc_exp_month_saved" value="{{ cc_exp_month }}" />
+                                <input type="hidden"
+                                            id="cc_cvv2_saved"
+                                            name="cc_cvv2_saved"
+                                            value="111"
+                                            maxlength="4"
+                                            placeholder="{{ config.lang.checkout_csc }}"
+                                            autocomplete="off"
+                                            class="fc-form-control fc-form-control--cvv2-saved" />
                             </label>
 
 
@@ -461,7 +469,7 @@ CONVENTIONS:
                                         <input type="tel"
                                             id="cc_cvv2_saved"
                                             name="cc_cvv2_saved"
-                                            value=""
+                                            value="{{ cc_cvv2 }}"
                                             maxlength="4"
                                             placeholder="{{ config.lang.checkout_csc }}"
                                             autocomplete="off"
