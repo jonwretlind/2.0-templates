@@ -461,7 +461,7 @@ CONVENTIONS:
                                         <input type="tel"
                                             id="cc_cvv2_saved"
                                             name="cc_cvv2_saved"
-                                            value="{{ cc_cvv2_saved }}"
+                                            value="000"
                                             maxlength="4"
                                             placeholder="{{ config.lang.checkout_csc }}"
                                             autocomplete="off"
@@ -551,26 +551,15 @@ CONVENTIONS:
                                 {% set field_name = 'cc_cvv2' %}
                                 {% set error_string = utils.get_error_string(field_name, messages.errors) %}
                                 <div id="fc-payment-method-plastic-csc" class="fc-container__grid--plastic-new-csc {% if error_string %}fc-alert-container--error{%endif %}" data-fc-error-for="cc_cvv2" data-fc-error-class="fc-alert-container--error,has-success">
-                                    <!-- <input type="tel"
+                                    <input type="tel"
                                         id="cc_cvv2"
                                         name="cc_cvv2"
-                                        value="{{ cc_cvv2 }}"
+                                        value="00"
                                         maxlength="4"
                                         placeholder="{{ config.lang.checkout_csc }}"
                                         autocomplete="off"
                                         class="fc-form-control fc-form-control--new-cc-cvv2"
-                                         /> -->
-                                         
-                                         <!-- MY HACK FOR FOXY.IO SUBSCRIPTIONS -->
-                                         <input type="tel"
-                                        id="cc_cvv2"
-                                        name="cc_cvv2"
-                                        value="000"
-                                        maxlength="4"
-                                        placeholder="{{ config.lang.checkout_csc }}"
-                                        autocomplete="off"
-                                        class="fc-form-control fc-form-control--new-cc-cvv2"
-                                         />
+                                         /> 
                                 </div>
                             </div>
                             {% endif %}
